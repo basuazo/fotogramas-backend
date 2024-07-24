@@ -1,11 +1,15 @@
-export class Cancion {
+import { Comentario } from './comentario';
+import { Usuario } from './usuario';
+
+export class Foto {
   constructor(
     public id: number,
-    public nombre: string,
-    public duracion: number,
-    public reproducciones: number,
-    public generoMusical: string[],
-    public artista: Artista,
-    public album: string,
+    public ruta: string,
+    public descripcion: string,
+    public hashtags: string[],
+    public fechaSubida: Date,
+    public usuario: Usuario,
+    public meGusta: Usuario[],
+    public comentarios: Comentario[],
   ) {}
 }
